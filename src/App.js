@@ -1,13 +1,18 @@
+// REACT
+import React from "react";
+// CSS
 import "./App.css";
-
+// COMPONENTS
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+	return (
+		<main>
+			<Header />
+			<Footer />
+		</main>
+	);
 }
 
 export default App;
-

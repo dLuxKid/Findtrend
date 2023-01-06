@@ -1,0 +1,123 @@
+header {
+	padding: 1.5rem var(--padding);
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	background: var(--black);
+}
+
+.logoContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.logoicon {
+	display: none;
+}
+
+.navMenu {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	align-items: center;
+}
+
+.navItem {
+	color: var(--grey4);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.navItem:hover {
+	color: var(--grey2);
+}
+
+.authBtnsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.loginBtn {
+	color: var(--grey4);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.loginBtn:hover {
+	color: var(--grey2);
+}
+
+.signupBtn {
+	font-size: 1rem;
+	font-weight: 400;
+	background-color: var(--offwhite);
+	color: var(--black);
+	padding: var(--button-padding);
+	border-radius: var(--button-radius);
+}
+
+.signupBtn:hover {
+	background: var(--grey2);
+	color: var(--black);
+}
+
+.navBtn {
+	display: none;
+	cursor: pointer;
+	z-index: 100;
+}
+
+@media screen and (max-width: 992px) {
+	.logoicon {
+		display: block;
+		width: 32px;
+		height: 32px;
+	}
+	.logo {
+		display: none;
+	}
+
+	.navigation {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--black);
+		z-index: 99;
+		display: none;
+		transition: 0.5s ease-in-out;
+	}
+
+	.navMenu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--black);
+		flex-direction: column;
+		justify-content: center;
+		z-index: 100;
+		line-height: 20px;
+		color: var(--offwhite);
+		justify-content: center;
+		align-items: center;
+	}
+
+	.show_menu {
+		display: block;
+	}
+
+	.navBtn {
+		display: block;
+	}
+
+	.authBtnsContainer {
+		flex-direction: column;
+	}
+}
