@@ -53,16 +53,18 @@ header {
 
 .signupBtn {
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 500;
 	background-color: var(--offwhite);
 	color: var(--black);
 	padding: var(--button-padding);
 	border-radius: var(--button-radius);
+	transition: 0.5s ease-in-out;
 }
 
 .signupBtn:hover {
-	background: var(--grey2);
-	color: var(--black);
+	background: var(--button-hover);
+	transform: scale(1.05);
+	color: var(--offwhite);
 }
 
 .navBtn {

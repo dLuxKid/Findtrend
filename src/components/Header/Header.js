@@ -25,8 +25,10 @@ const Header = () => {
 	return (
 		<header>
 			<div className='logoContainer'>
-				<img src={logoicon} alt='logo' className='logoicon' />
-				<img src={logo} alt='Logo' className='logo' />
+				<NavLink to='/'>
+					<img src={logoicon} alt='logo' className='logoicon' />
+					<img src={logo} alt='Logo' className='logo' />
+				</NavLink>
 			</div>
 			<div className='navigation' ref={menuRef} onClick={toggleMenu}>
 				<div className='navMenu'>
