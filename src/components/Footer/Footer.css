@@ -36,3 +36,15 @@ footer {
 		flex-direction: column;
 	}
 }
+
+@media only screen and (max-width: 480px) {
+	.footerContainer {
+		gap: 1.5rem;
+	}
+	.footerNavigationList {
+		gap: 1.5rem;
+	}
+	.footerNavigationList li {
+		font-size: 0.8rem;
+	}
+}
