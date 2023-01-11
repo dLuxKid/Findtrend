@@ -1,5 +1,5 @@
 // REACT
-import React from "react";
+import React, { useState, useRef } from "react";
 // CSS
 import "./Homepage.css";
 // IMAGES
@@ -15,8 +15,13 @@ import elontwtBig from "../../assets/images/elon-twitter-big.svg";
 
 // DATA
 import { startupImg, platformImg } from "../../components/startupImgs";
+import PlanOption from "../../components/plansOption/PlanOption";
 
 const Homepage = () => {
+	const [planOptions, setPlanOptions] = useState(false);
+
+	const rollball = useRef(null);
+
 	return (
 		<main>
 			<section className='herosection'>
@@ -120,21 +125,29 @@ const Homepage = () => {
 			</section>
 
 			<section className='dealsSection'>
-				<div className='title'>
-					<h1>Get your best deal</h1>
-				</div>
-				<div className='dealsOption'>
-					<p>Monthly</p>
-					<div className='ball_container'>
-						<div className='ball'></div>
+				<div className='deal_container'>
+					<div className='dealsTitle'>
+						<h1>Get your best deal</h1>
 					</div>
-					<p>Yearly</p>
-					<div className='btn_cta'>
-						<h5>All research start from here</h5>
-						<img src={whiteArrow} alt='white arrow' />
+					<div className='dealsOption'>
+						<p className={!planOptions ? "grey_color" : null}>Monthly</p>
+						<div
+							className='ball_container'
+							onClick={() => {
+								rollball.current.classList.toggle("ball_roll");
+								setPlanOptions(!planOptions);
+							}}
+						>
+							<div className='ball' ref={rollball}></div>
+						</div>
+						<p className={planOptions ? "grey_color" : null}>Yearly</p>
+						<div className='btn_cta'>
+							<h5>Save 10% per month</h5>
+							<img src={whiteArrow} alt='white arrow' />
+						</div>
 					</div>
+					<PlanOption />
 				</div>
-				<div></div>
 			</section>
 
 			<section className='joinusSection'>
