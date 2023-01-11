@@ -272,6 +272,7 @@
 	gap: 2rem;
 	justify-content: space-between;
 	align-items: center;
+	overflow: scroll;
 }
 
 .platformImg_container {
@@ -483,7 +484,6 @@
 	.platforms_list {
 		gap: 2rem;
 		justify-content: flex-start;
-		overflow: scroll;
 	}
 
 	.platformImg_container {

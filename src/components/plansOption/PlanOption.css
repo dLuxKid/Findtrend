@@ -1,6 +1,7 @@
 .plansContainer {
 	display: flex;
 	justify-content: space-between;
+	gap: 2rem;
 	align-self: stretch;
 	width: auto;
 }
@@ -8,7 +9,7 @@
 .planCard {
 	border-radius: 15px;
 	padding: 3%;
-	width: 300px;
+	width: 350px;
 }
 
 .planContents {
@@ -90,6 +91,7 @@
 
 	.planCard {
 		width: 100%;
+		padding: 5%;
 	}
 
 	.content_header {
