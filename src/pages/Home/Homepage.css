@@ -39,7 +39,6 @@
 
 .herosection_btnContainer button:hover {
 	background: var(--grey2);
-	transform: scale(1.05);
 }
 
 .herosection_btnContainer {
@@ -272,12 +271,25 @@
 	gap: 2rem;
 	justify-content: space-between;
 	align-items: center;
-	overflow: scroll;
+	overflow-x: scroll;
 }
 
 .platformImg_container {
 	padding: 1.5rem;
 	border-radius: 5px;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.platformImg_container:hover {
+	transform: translateY(-10px);
+}
+
+.greenBg {
+	background: var(--green2);
+}
+
+.whiteBg {
 	background: var(--offwhite);
 }
 
@@ -289,6 +301,10 @@
 	align-items: center;
 	margin: 0 auto;
 	width: 80%;
+}
+
+.trendsBtn {
+	margin-top: 2rem;
 }
 
 .trendsBtn button {
@@ -686,7 +702,7 @@
 
 	.title {
 		font-weight: 600;
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 
 	.findtrend_imgContainer img {

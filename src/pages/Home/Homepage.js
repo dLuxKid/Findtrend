@@ -19,7 +19,7 @@ import PlanOption from "../../components/plansOption/PlanOption";
 
 const Homepage = () => {
 	const [planOptions, setPlanOptions] = useState(false);
-
+	const [platformcolor, setPlatformColor] = useState(null);
 	const rollball = useRef(null);
 
 	return (
@@ -108,19 +108,29 @@ const Homepage = () => {
 					<h1 className='title'>All platform connect to FindTrend</h1>
 					<div className='platforms_list'>
 						{platformImg.map((item, index) => (
-							<div className='platformImg_container' key={index}>
+							<div
+								onClick={() => setPlatformColor(item.imgPath)}
+								className={`platformImg_container ${
+									platformcolor === item.imgPath ? "greenBg" : "whiteBg"
+								}`}
+								key={index}
+							>
 								<img src={item.imgPath} alt={item.imgPath} />
 							</div>
 						))}
 					</div>
-					<div className='trends'>
-						<img src={elontwt} alt="Elon's tweet" />
-						<img src={elontwtBig} alt="Elon's tweet" />
-						<img src={elontwt} alt="Elon's tweet" />
-					</div>
-					<div className='trendsBtn'>
-						<button>View More Trends</button>
-					</div>
+					{platformcolor && (
+						<div>
+							<div className='trends'>
+								<img src={elontwt} alt="Elon's tweet" />
+								<img src={elontwtBig} alt="Elon's tweet" />
+								<img src={elontwt} alt="Elon's tweet" />
+							</div>
+							<div className='trendsBtn'>
+								<button>View More Trends</button>
+							</div>
+						</div>
+					)}
 				</div>
 			</section>
 
@@ -146,7 +156,7 @@ const Homepage = () => {
 							<img src={whiteArrow} alt='white arrow' />
 						</div>
 					</div>
-					<PlanOption />
+					<PlanOption plan={planOptions} />
 				</div>
 			</section>
 

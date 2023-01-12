@@ -1,7 +1,7 @@
 import React from "react";
 import "./PlanOption.css";
 
-const PlanOption = () => {
+const PlanOption = ({ plan }) => {
 	return (
 		<div className='plansContainer'>
 			<div className='planCard' style={{ background: "var(--offwhite)" }}>
@@ -12,7 +12,7 @@ const PlanOption = () => {
 					</div>
 					<div className='content_features'>
 						<h1>
-							$8 <span>/Month</span>
+							${plan ? 96 : 8} <span>/Month</span>
 						</h1>
 						<ul>
 							<li>Up to 5 page each group</li>
@@ -36,7 +36,7 @@ const PlanOption = () => {
 					</div>
 					<div className='content_features'>
 						<h1>
-							$20 <span>/Month</span>
+							${plan ? 220 : 20} <span>/Month</span>
 						</h1>
 						<ul>
 							<li>Up to 15 page each group</li>
@@ -61,7 +61,7 @@ const PlanOption = () => {
 					</div>
 					<div className='content_features'>
 						<h1>
-							$48 <span>/Month</span>
+							${plan ? 480 : 48} <span>/Month</span>
 						</h1>
 						<ul>
 							<li>Unlimited group pages</li>

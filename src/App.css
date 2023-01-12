@@ -12,8 +12,8 @@
 	--offwhite: white;
 	/* PADDING  */
 	--padding: 10%;
-	--button-padding: 10px 30px;
-	--button-radius: 20px;
+	--button-padding: 16px 52px;
+	--button-radius: 30px;
 }
 
 * {
@@ -51,6 +51,12 @@ button {
 	border: 0;
 	outline: 0;
 	transition: 0.5s ease-in-out;
+}
+
+button:hover {
+	transform: scale(1.05);
+	background: var(--grey2);
+	opacity: 0.9;
 }
 
 section {
